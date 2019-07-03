@@ -1,0 +1,149 @@
+.header {
+    background-color: #f23030;
+    .h-search {
+        padding-bottom: 3px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 10px 16px;
+
+        .mui-icon {
+            font-size: 16px;
+        }
+
+        .center {
+            width: 100%;
+            border-radius: 17px;
+            color: #969799;
+            text-align: left;
+            font-size: 14px;
+            padding: 5px 10px;
+            background-color: #fff;
+        }
+    }
+}
+
+.main {
+    position: relative;
+
+    &-side {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        background-color: #f8f8f8;
+        ul{
+            width: 85px;
+            li{
+                width: 84px;
+                height: 59px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        padding-left: 85px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 33.33333%;
+                margin-top: 30px;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                div {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        ul:after {
+            content: "";
+            width: 33.33333%;
+        }
+    }
+}
+
+.my-tabbar {
+    bottom: 0;
+    display: table;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    table-layout: fixed;
+    border-top: 0;
+    border-bottom: 0;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    background-color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+    a {
+        display: table-cell;
+        overflow: hidden;
+        width: 1%;
+        height: 50px;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #929292;
+    }
+
+    .mui-icon {
+        font-family: Muiicons;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1;
+        display: inline-block;
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        margin-top: 4px;
+    }
+
+    .mui-icon~.mui-tab-label {
+        font-size: 11px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .icon-active {
+        color: #f23030;
+    }
+
+    .active {
+        color: #000;
+    }
+
+}
+
+.side-active{
+    background-color: #fff;
+    color: #f23030;
+}

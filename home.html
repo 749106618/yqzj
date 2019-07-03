@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有券之家</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=format-detection content="telephone=no">
+    <meta name=format-detection content="email=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=full-screen content=yes>
+    <meta name=browsermode content=application>
+    <meta name=x5-orientation content=portrait>
+    <meta name=x5-fullscreen content=true>
+    <meta name=x5-page-mode content=app>
+    <!--清除缓存-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link href="./iconfont/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<script>
+    !(function (doc, win) {
+        var el = doc.documentElement;
+        //resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function setSize() {
+            var w = el.clientWidth;
+            if (!w) return;
+            w = w > 480 ? 480 : w;
+            w = w < 320 ? 320 : w;
+            el.style.fontSize = (100 * (w / 1080)).toFixed(3) + 'px';
+        }
+        if (!doc.addEventListener) return;
+        setSize();
+        win.addEventListener('resize', setSize, false);
+        win.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                setSize();
+            }
+        }, false);
+    })(document, window);
+</script>
+
+<body>
+    <div class="header">
+        <div class="h-search">
+            <form class="center"><i class="mui-icon mui-icon-search"></i> 搜索宝贝 领券省钱 分享赚钱 </form>
+        </div>
+        <div class="hot-search">
+            <div class="hot-search-left">
+                <i class="iconfont icon-huore"></i> 热门搜索:
+            </div>
+            <div class="hot-search-right" id="wrapper">
+                <ul>
+                    <li>
+                        女士连衣裙
+                    </li>
+                    <li>
+                        女士连衣裙
+                    </li>
+                    <li>
+                        女士连衣裙
+                    </li>
+                    <li>
+                        女士连衣裙
+                    </li>
+                    <li>
+                        女士连衣裙
+                    </li>
+                    <li>
+                        女士连衣裙
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner mui-slider" id="">
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/001.png">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_493.png">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546940336838_678.png">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_498.png">
+                </a>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/001.png">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_493.png">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+
+    <div class="menus">
+        <ul>
+            <li search-type="6">
+                <img src="./static/home/jingxuan.png">
+                <div>每日精选</div>
+            </li>
+            <li search-type="2">
+                <img src="./static/home/baoping.png">
+                <div>爆品榜</div>
+            </li>
+            <li search-type="1">
+                <img src="./static/home/9.9.png">
+                <div>9.9包邮</div>
+            </li>
+            <li search-type="6">
+                <img src="./static/home/ju.png">
+                <div>品牌券</div>
+            </li>
+            <li search-type="4">
+                <img src="./static/home/xinyongka.png">
+                <div>母婴版</div>
+            </li>
+            <li search-type="9">
+                <img src="./static/home/muying.png">
+                <div>拼团</div>
+            </li>
+            <li search-type="8">
+                <img src="./static/home/pintuan.png">
+                <div>大额券</div>
+            </li>
+            <li search-type="3">
+                <img src="./static/home/quan.png">
+                <div>有好货</div>
+            </li>
+            <li search-type="5">
+                <img src="./static/home/good.png">
+                <div>每日精选</div>
+            </li>
+            <li search-type="7">
+                <img src="./static/home/chaoliu.png">
+                <div>潮流范</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="activity mui-slider" id="new_vip_slider">
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/001.png">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_493.png">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546940336838_678.png">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_498.png">
+                </a>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/001.png">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/1546939879194_493.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="goods">
+        <div class="goods-title">
+            <div class="goods-title-left">
+                <img src="./static/home/tuijan.png" alt>
+                <span>为您推荐</span>
+            </div>
+            <div class="goods-title-right">
+                <span>查看更多</span>
+                <i class="mui-icon mui-icon-arrowright"></i>
+            </div>
+        </div>
+        <div class="goods-list">
+            <ul>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+                <li>
+                    <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                    <div class="goods-list-top">
+                        <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png">
+                        <span>usb充电体重秤电子秤精</span>
+                    </div>
+                    <div class="goods-list-mid">
+                        <div class="box1">券10</div>
+                        <div class="box2">预估佣金￥7.18</div>
+                    </div>
+                    <div class="goods-list-bottom">
+                        <div class="left">
+                            <span class="s1">￥</span>
+                            <span class="s1 s2">68</span>
+                            <span class="s3">￥139</span>
+                        </div>
+                        <div class="right">月售 21355</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="my-tabbar">
+        <a class="icon-active">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a href="./classify.html">
+            <span class="mui-icon iconfont icon-fenlei"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a href="./redpack.html">
+            <span class="mui-icon iconfont icon-liping"></span>
+            <span class="mui-tab-label">红包</span>
+        </a>
+        <a href="./self.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span class="mui-tab-label">我</span>
+        </a>
+    </nav>
+
+    <script src="./js/mui.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/better-scroll.js"></script>
+    <script>
+        $(function () {
+            mui.init({
+                swipeBack: true //启用右滑关闭功能
+            });
+            var gallery = mui('#slider');
+            gallery.slider({
+                interval: 2500//自动轮播周期，若为0则不自动播放，默认为0；
+            });
+            var new_vip_slider = mui("#new_vip_slider");
+            new_vip_slider.slider({
+                interval: 3000//自动轮播周期，若为0则不自动播放，默认为0；
+            });
+
+            document.addEventListener('gohome', function () {
+                var defaultTab = document.getElementById("defaultTab");
+                //模拟首页点击
+                mui.trigger(defaultTab, 'tap');
+                //切换选项卡高亮
+                var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+
+                if (defaultTab !== current) {
+                    current.classList.remove('mui-active');
+                    defaultTab.classList.add('mui-active');
+                }
+            });
+            var wrapper = document.querySelector('#wrapper')
+            var ulLen = $('#wrapper ul li').length;
+            $('#wrapper ul').width(80 * ulLen)
+            var scroll = new BScroll(wrapper, {
+                startX: 0,
+                click: true,
+                scrollX: true,
+                // 忽略竖直方向的滚动
+                scrollY: false,
+                eventPassthrough: "vertical"
+            })
+
+        })
+
+
+    </script>
+</body>
+
+</html>

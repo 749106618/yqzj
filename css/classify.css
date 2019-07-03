@@ -1,0 +1,131 @@
+.header {
+  background-color: #f23030;
+}
+.header .h-search {
+  padding-bottom: 3px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 16px;
+}
+.header .h-search .mui-icon {
+  font-size: 16px;
+}
+.header .h-search .center {
+  width: 100%;
+  border-radius: 17px;
+  color: #969799;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+.main {
+  position: relative;
+}
+.main-side {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+.main-side ul {
+  width: 85px;
+}
+.main-side ul li {
+  width: 84px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.main-content {
+  width: 100%;
+  padding-left: 85px;
+}
+.main-content ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main-content ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33.33333%;
+  margin-top: 30px;
+}
+.main-content ul li img {
+  width: 60px;
+  height: 60px;
+}
+.main-content ul li div {
+  margin-top: 10px;
+}
+.main-content ul:after {
+  content: "";
+  width: 33.33333%;
+}
+.my-tabbar {
+  bottom: 0;
+  display: table;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  table-layout: fixed;
+  border-top: 0;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  height: 44px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 0;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 0 10px 0 rgba(154, 141, 141, 0.6);
+}
+.my-tabbar a {
+  display: table-cell;
+  overflow: hidden;
+  width: 1%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #929292;
+}
+.my-tabbar .mui-icon {
+  font-family: Muiicons;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 4px;
+}
+.my-tabbar .mui-icon ~ .mui-tab-label {
+  font-size: 11px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.my-tabbar .icon-active {
+  color: #f23030;
+}
+.my-tabbar .active {
+  color: #000;
+}
+.side-active {
+  background-color: #fff;
+  color: #f23030;
+}

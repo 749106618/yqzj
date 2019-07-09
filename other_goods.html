@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有券之家</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=format-detection content="telephone=no">
+    <meta name=format-detection content="email=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=full-screen content=yes>
+    <meta name=browsermode content=application>
+    <meta name=x5-orientation content=portrait>
+    <meta name=x5-fullscreen content=true>
+    <meta name=x5-page-mode content=app>
+    <!--清除缓存-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/goodsList/hotOrRecommend.css">
+    <link rel="stylesheet" href="./css/goodsList/other_search_goods.css">
+</head>
+<script>
+    !(function (doc, win) {
+        var el = doc.documentElement;
+        //resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function setSize() {
+            var w = el.clientWidth;
+            if (!w) return;
+            w = w > 480 ? 480 : w;
+            w = w < 320 ? 320 : w;
+            el.style.fontSize = (100 * (w / 1080)).toFixed(3) + 'px';
+        }
+        if (!doc.addEventListener) return;
+        setSize();
+        win.addEventListener('resize', setSize, false);
+        win.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                setSize();
+            }
+        }, false);
+    })(document, window);
+</script>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">9.9包邮</h1>
+        <a class="bread" href="#picture"><i class="icon-crumbs icon-sousuoleimu"></i></a>
+    </header>
+    <div class="content">
+        <div class="goods">
+            <div class="goods-list">
+                <ul>
+                    <li>
+                        <img class="img1" src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png" />
+                        <div class="goods-list-top">
+                            <img src="https://www.yqzjw.com/res/upload/tqq/images/201901/002.png" />
+                            <span>usb充电体重秤电子秤精</span>
+                        </div>
+                        <div class="goods-list-mid">
+                            <div class="box1">券10</div>
+                            <div class="box2">预估佣金￥7.18</div>
+                        </div>
+                        <div class="goods-list-bottom">
+                            <div class="left">
+                                <span class="s1">￥</span>
+                                <span class="s1 s2">68</span>
+                                <span class="s3">￥139</span>
+                            </div>
+                            <div class="right">月售 21355</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+        <div class="classify">
+            <div class="classify-delete">
+                <a class="active" href="#"><span class="mui-icon mui-icon-closeempty"></span></a>
+            </div>
+            <div class="classify-title">商品分类</div>
+            <ul class="classify-list">
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+                <li><a href="#">食品</a></li>
+            </ul>
+            <!-- 如果没商品提示 -->
+            <div class="not-classify" v-if="classifys.length == 0">已您推荐所有商品</div>
+        </div>
+    </div>
+
+    <script src="./js/mui.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+
+        $(document).on('tap', '.mui-icon-left-nav', function () {
+            if (window.history.length > 1) {
+                window.history.back();
+                return true;
+            }
+
+        })
+        mui.init()
+     
+        mui('body').on('tap','.classify-delete',function(){
+                mui('#picture').popover('toggle')
+        })
+        mui('body').on('tap','.classify-list li',function(){
+                mui('#picture').popover('toggle')
+        })
+
+    </script>
+</body>
+
+</html>

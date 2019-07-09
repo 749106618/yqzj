@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有券之家</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=format-detection content="telephone=no">
+    <meta name=format-detection content="email=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=full-screen content=yes>
+    <meta name=browsermode content=application>
+    <meta name=x5-orientation content=portrait>
+    <meta name=x5-fullscreen content=true>
+    <meta name=x5-page-mode content=app>
+    <!--清除缓存-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/goodsList/hotOrRecommend.css">
+    <link rel="stylesheet" href="./css/self_goods.css">
+    <style>
+        .orderTap {
+            z-index: 10;
+        }
+        .search_goods{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+<script>
+    !(function (doc, win) {
+        var el = doc.documentElement;
+        //resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function setSize() {
+            var w = el.clientWidth;
+            if (!w) return;
+            w = w > 480 ? 480 : w;
+            w = w < 320 ? 320 : w;
+            el.style.fontSize = (100 * (w / 1080)).toFixed(3) + 'px';
+        }
+        if (!doc.addEventListener) return;
+        setSize();
+        win.addEventListener('resize', setSize, false);
+        win.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                setSize();
+            }
+        }, false);
+    })(document, window);
+</script>
+
+<body>
+    <div id="content">
+        <header class="mui-bar mui-bar-nav" id="top">
+            <a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">夹克</h1>
+        </header>
+
+        <div id="pullrefresh" class="content mui-scroll-wrapper">
+            <div class="goods mui-scroll">
+                <div class="goods-list">
+                    <ul class="xiala">
+                        <li class="item" v-for="(good,index) in goods" :key="index">
+                            <img class="img1" :src="good.imgSrc" />
+                            <div class="goods-list-top">
+                                <img :src="good.smallImg" />
+                                <span>{{good.title}}</span>
+                            </div>
+                            <div class="goods-list-mid">
+                                <div class="box1">券{{good.couponAmt}}</div>
+                                <div class="box2">预估佣金￥{{good.commission}}</div>
+                            </div>
+                            <div class="goods-list-bottom">
+                                <div class="left">
+                                    <span class="s1">￥</span>
+                                    <span class="s1 s2">{{good.salePrice}}</span>
+                                    <span class="s3">￥{{good.price}}</span>
+                                </div>
+                                <div class="right">月售 {{good.monthlySale}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search_goods" style="display: none;">
+                <div class="search_goods_list" style="overflow-y: scroll;">
+                    <a class="search_content" v-for="(good,index) in goods" :key="index">
+                        <img class="left" :src="good.imgSrc">
+                        <div class="right">
+                            <div class="name">
+                                <img src="./static/bg_label_taobao.png">
+                                <span>迩迪8D超薄T裆加裆强韧钢丝连裤袜加大码丝袜女胖mm200斤买三送一</span>
+                            </div>
+                            <div class="info">
+                                <span>淘宝价: ¥ 13</span>
+                                <span style="padding-right: 3px;">月销量:66</span>
+                            </div>
+                            <div class="value">
+                                <div class="quan">券￥10</div>
+                                <div class="red">佣金:2.05</div>
+                            </div>
+                            <div class="price"><span>¥13</span></div>
+                        </div>
+                    </a>
+                </div>
+        </div>
+
+        <ul class="mui-table-view mui-product tap-view orderTap">
+            <li class="mui-table-view-cell mui-collapse mui-col-xs-3">
+                <a class="mui-navigate-right" id="0,0" href="#topPopover">综合</a>
+            </li>
+            <li class="mui-table-view-cell mui-collapse mui-col-xs-3">
+                <a class="mui-navigate-right" id="1,1">价格</a>
+            </li>
+            <li class="mui-table-view-cell mui-collapse mui-col-xs-3">
+                <a class="mui-navigate-right" id="2,1">销量</a>
+            </li>
+            <li class="btn_serach mui-table-view-cell mui-collapse mui-col-xs-3">
+                <a id="btn_serach"><span class="mui-icon iconfont icon-fenlei"></span></a>
+            </li>
+        </ul>
+        <div id="topPopover" class="mui-popover">
+            <div class="mui-popover-arrow"></div>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell"><a class="select-item">整合排序</a>
+                        </li>
+                        <li class="mui-table-view-cell"><a class="select-item">优惠券面值由高到低</a>
+                        </li>
+                        <li class="mui-table-view-cell"><a class="select-item">优惠券面值由低到高</a>
+                        </li>
+                        <li class="mui-table-view-cell"><a class="select-item">预估收益由高到低</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/mui.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        mui.init({
+            pullRefresh: {
+                container: "#pullrefresh",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+                up: {
+                    height: 50,//可选.默认50.触发上拉加载拖动距离
+                    auto: false,//可选,默认false.自动上拉加载一次
+                    contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+                    contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+                    callback: pullupRefresh  //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+                }
+            }
+        })
+        // mui('#pullrefresh1').pullRefresh({
+        //     up: {
+        //         height: 50,//可选.默认50.触发上拉加载拖动距离
+        //         auto: false,//可选,默认false.自动上拉加载一次
+        //         contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+        //         contentnomore: '没有更多数据了',
+        //         callback: pullupRefresh
+        //     },
+        // })
+
+        $(document).on('tap', '.mui-icon-left-nav', function () {
+            if (window.history.length > 1) {
+                window.history.back();
+                return true;
+            }
+        })
+        //切换商品列表
+        mui(document).on("tap", "a", function (e) {
+            var ids = this.getAttribute("id");
+            console.log(ids);
+
+            if (ids == 'btn_serach') {
+                if (document.getElementById("btn_serach").innerHTML == '<span class="mui-icon iconfont icon-fenlei"></span>') {
+                    document.getElementById("btn_serach").innerHTML = '<span class="mui-icon mui-icon-bars"></span>';
+                    //$('.goods').hide()
+                    document.querySelector('.goods').style.display = 'none'
+                    document.querySelector('.search_goods').style.display = 'block'
+                    //$('.search_goods').show()
+                } else {
+                    document.getElementById("btn_serach").innerHTML = '<span class="mui-icon iconfont icon-fenlei"></span>'
+                    document.querySelector('.goods').style.display = 'block'
+                    document.querySelector('.search_goods').style.display = 'none'
+                    // $('.goods').show()
+                    //$('.search_goods').hide()
+                }
+            }
+        })
+
+        //控制弹出框
+        $(document).on("tap", ".select-item", function () {
+            mui('.mui-popover').popover('toggle');
+
+        })
+        //vue实例
+        var selfGoods = new Vue({
+            el: '#content',
+            data: {
+                i: 0,
+                goods: []
+            },
+            mounted: function () {
+                loadData()
+            }
+        })
+
+        var newArray = [];
+        //首次加载
+        function loadData() {
+            var self = this
+            $.ajax({
+                type: "GET",
+                url: "goods.json",
+                dataType: "json",
+                success: function (data) {
+
+                    console.log(data);
+                    var index = 0;
+                    var array = data.result;
+                    while (index < array.length) {
+                        newArray.push(array.slice(index, index += 10));
+                    }
+                    selfGoods.goods = newArray[0]
+                    console.log(newArray);
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+            })
+        }
+        //分页
+        var i = 0
+        function pullupRefresh() {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((i > 4)); 
+            selfGoods.goods = selfGoods.goods.concat(newArray[++i])
+        }
+    </script>
+</body>
+
+</html>

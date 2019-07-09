@@ -1,11 +1,6 @@
-
-
-.banner {
-  img {
-    height: 375px;
-  }
+.banner img {
+  height: 375px;
 }
-
 .title {
   font-weight: 700;
   line-height: 24px;
@@ -13,16 +8,14 @@
   font-size: 16px;
   text-align: justify;
   padding: 5px 5px 0 5px;
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -2px;
-    margin-right: 5px;
-    height: 14px;
-  }
 }
-
+.title img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 5px;
+  height: 14px;
+}
 .info {
   padding: 0 5px;
   display: flex;
@@ -30,19 +23,16 @@
   color: #999;
   font-size: 14px;
   margin-bottom: 10px;
-
-  .ft {
-    font-size: 14px;
-    color: #ff0066;
-    font-weight: bold;
-    display: initial;
-  }
-
-  .s3 {
-    text-decoration: line-through;
-  }
 }
-
+.info .ft {
+  font-size: 14px;
+  color: #ff0066;
+  font-weight: bold;
+  display: initial;
+}
+.info .s3 {
+  text-decoration: line-through;
+}
 .coupon {
   text-align: center;
   display: inline-flex;
@@ -55,17 +45,12 @@
   border-bottom-right-radius: .3rem;
   overflow: hidden;
 }
-
 .coupon-yellow {
   background-color: #F39B00;
 }
-
-.coupon-wave-left {}
-
 .coupon-wave-left::before {
   left: -7px;
 }
-
 .coupon-wave-left::before,
 .coupon-wave-right::after {
   content: '';
@@ -79,11 +64,9 @@
   background-repeat: repeat-y;
   z-index: 1;
 }
-
 .coupon-info-right-dashed {
   border-right: 2px dashed white;
 }
-
 .coupon-info {
   padding-left: .1rem;
   padding-right: .1rem;
@@ -91,11 +74,9 @@
   position: relative;
   min-width: 7.5rem;
 }
-
 .coupon-info::before {
-  top: -.5rem;
+  top: -0.5rem;
 }
-
 .coupon-hole::before,
 .coupon-hole::after {
   content: '';
@@ -104,27 +85,22 @@
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  right: -.5rem;
+  right: -0.5rem;
 }
-
-.coupon-info>div {
+.coupon-info > div {
   margin-bottom: .2rem;
 }
-
 .coupon-price {
   font-size: 19px;
   font-weight: bold;
   margin: .3rem 0 .2rem;
 }
-
-.coupon-info>div {
+.coupon-info > div {
   margin-bottom: .2rem;
 }
-
 .coupon-expiry-date {
   font-size: .42rem;
 }
-
 .coupon-get {
   padding: .2rem;
   display: flex;
@@ -136,11 +112,9 @@
   font-weight: bold;
   font-size: .52rem;
 }
-
 .mui-card {
   margin: 10px 5px;
 }
-
 .mui-card {
   font-size: 14px;
   position: relative;
@@ -149,26 +123,22 @@
   border-radius: 2px;
   background-color: #fff;
   background-clip: padding-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-
 .mui-card-header.mui-card-media {
   display: block;
   padding: 10px;
 }
-
 .mui-card-media {
   vertical-align: bottom;
   color: #fff;
   background-position: center;
   background-size: cover;
 }
-
 .mui-card-header {
   font-size: 17px;
   border-radius: 2px 2px 0 0;
 }
-
 .mui-card-footer,
 .mui-card-header {
   position: relative;
@@ -184,15 +154,13 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
-.mui-card-header>img:first-child {
+.mui-card-header > img:first-child {
   font-size: 0;
   line-height: 0;
   float: left;
   width: 34px;
   height: 34px;
 }
-
 .mui-card-header.mui-card-media .mui-media-body {
   font-size: 14px;
   font-weight: 500;
@@ -201,12 +169,10 @@
   margin-left: 44px;
   color: #333;
 }
-
 .mui-card-header:after {
   top: auto;
   bottom: 0;
 }
-
 .mui-card-header.mui-card-media .mui-media-body {
   font-size: 14px;
   font-weight: 500;
@@ -215,12 +181,10 @@
   margin-left: 44px;
   color: #333;
 }
-
 .mui-card-footer {
   color: #6d6d72;
   border-radius: 0 0 2px 2px;
 }
-
 .mui-card-footer,
 .mui-card-header {
   position: relative;
@@ -236,7 +200,6 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
 .mui-card-footer .mui-card-link,
 .mui-card-header .mui-card-link {
   line-height: 44px;
@@ -257,167 +220,140 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
 .mui-card-link {
   color: #000;
 }
-
-
-
 .main {
   padding: 0 0 0.05rem;
   margin: 10px;
-
-  .mui-text-center {
-    margin: 0;
-    opacity: .8;
-    line-height: 2;
-    font-size: .4rem;
-    overflow: hidden;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .goods {
-    .goods-list {
-      padding-bottom: 40px;
-      margin-top: 10px;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        li {
-          width: 49%;
-          background-color: #fff;
-          border-radius: 10px;
-          box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.14);
-          margin-bottom: 10px;
-
-          .img1 {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            height: 150px;
-            width: 100%;
-          }
-
-          .goods-list-top {
-            display: flex;
-            align-items: center;
-            padding: 7px 5px;
-            padding-bottom: 10px;
-
-            img {
-              width: 15px;
-              height: 10px;
-            }
-
-            span {
-              margin-left: 4px;
-            }
-          }
-
-          .goods-list-mid {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            padding: 0 5px;
-
-            .box1 {
-              background: url(../../static/home/discountjx.png)no-repeat;
-              background-size: 100% 100%;
-              height: 18px;
-              text-align: center;
-              line-height: 18px;
-              color: #ff395c;
-              padding: 0 8px;
-            }
-
-            .box2 {
-              color: #ff395c;
-              border: 1px solid #ff395c;
-              border-radius: 3px;
-              background-color: rgba(254, 206, 206, 1);
-              line-height: 14px;
-              margin-left: 10px;
-              padding: 0 4px;
-            }
-          }
-
-          .goods-list-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding: 10px 5px;
-            padding-bottom: 15px;
-            color: #969799;
-            letter-spacing: -1px;
-
-            .left {
-              .s1 {
-                color: #FB3535;
-                font-size: 13px;
-              }
-
-              .s2 {
-                font-size: 16px;
-              }
-
-              .s3 {
-                text-decoration: line-through;
-                margin-left: 4px;
-              }
-            }
-
-            .right {}
-
-          }
-        }
-      }
-
-      ul:after {
-        content: "";
-        width: 45%;
-      }
-    }
-  }
 }
-.van-goods-action-icon{
-    flex: 1;
+.main .mui-text-center {
+  margin: 0;
+  opacity: .8;
+  line-height: 2;
+  font-size: .4rem;
+  overflow: hidden;
+  font-weight: 400;
+  text-align: center;
 }
-
-.tabbar{
+.main .goods .goods-list {
+  padding-bottom: 40px;
+  margin-top: 10px;
+}
+.main .goods .goods-list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .goods .goods-list ul li {
+  width: 49%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.14);
+  margin-bottom: 10px;
+}
+.main .goods .goods-list ul li .img1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 150px;
+  width: 100%;
+}
+.main .goods .goods-list ul li .goods-list-top {
+  display: flex;
+  align-items: center;
+  padding: 7px 5px;
+  padding-bottom: 10px;
+}
+.main .goods .goods-list ul li .goods-list-top img {
+  width: 15px;
+  height: 10px;
+}
+.main .goods .goods-list ul li .goods-list-top span {
+  margin-left: 4px;
+}
+.main .goods .goods-list ul li .goods-list-mid {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 5px;
+}
+.main .goods .goods-list ul li .goods-list-mid .box1 {
+  background: url(../../static/home/discountjx.png) no-repeat;
+  background-size: 100% 100%;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  color: #ff395c;
+  padding: 0 8px;
+}
+.main .goods .goods-list ul li .goods-list-mid .box2 {
+  color: #ff395c;
+  border: 1px solid #ff395c;
+  border-radius: 3px;
+  background-color: #fecece;
+  line-height: 14px;
+  margin-left: 10px;
+  padding: 0 4px;
+}
+.main .goods .goods-list ul li .goods-list-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 5px;
+  padding-bottom: 15px;
+  color: #969799;
+  letter-spacing: -1px;
+}
+.main .goods .goods-list ul li .goods-list-bottom .left .s1 {
+  color: #FB3535;
+  font-size: 13px;
+}
+.main .goods .goods-list ul li .goods-list-bottom .left .s2 {
+  font-size: 16px;
+}
+.main .goods .goods-list ul li .goods-list-bottom .left .s3 {
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+.main .goods .goods-list ul:after {
+  content: "";
+  width: 45%;
+}
+.van-goods-action-icon {
+  flex: 1;
+}
+.tabbar {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  ul{
-    height: 50px;
-    display: flex;
-    li{
-      flex: 1;
-      a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        color: #fff;
-      }
-    }
-    li:nth-child(1){
-      background-color: #fff;
-      a{
-        color: #999;
-      }
-    }
-    li:nth-child(2){
-      font-size: 14px;
-      background-color: #f5b644;
-    }
-    li:nth-child(3){
-      font-size: 14px;
-      background-color: #ff0066;
-    }
-  }
+}
+.tabbar ul {
+  height: 50px;
+  display: flex;
+}
+.tabbar ul li {
+  flex: 1;
+}
+.tabbar ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+.tabbar ul li:nth-child(1) {
+  background-color: #fff;
+}
+.tabbar ul li:nth-child(1) a {
+  color: #999;
+}
+.tabbar ul li:nth-child(2) {
+  font-size: 14px;
+  background-color: #f5b644;
+}
+.tabbar ul li:nth-child(3) {
+  font-size: 14px;
+  background-color: #ff0066;
 }

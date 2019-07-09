@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有券之家</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=format-detection content="telephone=no">
+    <meta name=format-detection content="email=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=full-screen content=yes>
+    <meta name=browsermode content=application>
+    <meta name=x5-orientation content=portrait>
+    <meta name=x5-fullscreen content=true>
+    <meta name=x5-page-mode content=app>
+    <!--清除缓存-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <style>
+        /* 修改mui样式部分 */
+
+
+        .mui-input-clear {
+            background-color: #fff;
+        }
+
+        .header .h-search {
+            padding-bottom: 0;
+        }
+
+        input[type=search] {
+            border-radius: 20px;
+            background-color: #fff;
+        }
+
+        .mui-input-row.mui-search .mui-icon-clear {
+            top: 10px;
+        }
+    </style>
+</head>
+<script>
+    !(function (doc, win) {
+        var el = doc.documentElement;
+        //resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        function setSize() {
+            var w = el.clientWidth;
+            if (!w) return;
+            w = w > 480 ? 480 : w;
+            w = w < 320 ? 320 : w;
+            el.style.fontSize = (100 * (w / 
+            
+            
+            )).toFixed(3) + 'px';
+        }
+        if (!doc.addEventListener) return;
+        setSize();
+        win.addEventListener('resize', setSize, false);
+        win.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                setSize();
+            }
+        }, false);
+    })(document, window);
+</script>
+
+<body>
+    <div class="header">
+        <a class="left mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <form action="javascript:void(0)" onsubmit="logining" class="center mui-input-row mui-search">
+            <input onkeyup="myKeyUp(this)" type="search" class="mui-input-clear" placeholder="请输入商户和优惠券">
+        </form>
+        <div class="right">搜索</div>
+    </div>
+    <div class="history">
+        <div class="left">历史搜索:</div>
+        <div class="right">
+            <a onclick="claer()">
+                <span class="mui-icon mui-icon-trash"></span>
+                <span>清空</span>
+            </a>
+        </div>
+    </div>
+    <p class="p-a pa1">
+        <a>女士连衣裙</a>
+        <a>童装</a>
+        <a>男士T恤</a>
+        <a>护肤品</a>
+        <a>口红</a>
+        <a>充电宝</a>
+        <a>运动鞋</a>
+        <a>耳机</a>
+        <a>辣条</a>
+    </p>
+    <div class="history mt-10">
+        <div class="left">热门搜索:</div>
+    </div>
+    <p class="p-a">
+        <a>女士连衣裙</a>
+        <a>童装</a>
+        <a>男士T恤</a>
+        <a>护肤品</a>
+        <a>口红</a>
+        <a>充电宝</a>
+        <a>运动鞋</a>
+        <a>耳机</a>
+        <a>辣条</a>
+    </p>
+    <div class="search_list" style="display: none">
+        <ul id="search_ul">
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+            <li>
+                <a>1313气场女装</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script src="./js/mui.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+</body>
+<script>
+    function myKeyUp(obj) {
+        if ($(obj).val()) {
+            $('.search_list').show()
+        } else {
+            $('.search_list').hide()
+        }
+    }
+
+    function claer() {
+        $('.pa1').hide()
+    }
+</script>
+
+</html>

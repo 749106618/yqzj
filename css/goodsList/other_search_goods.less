@@ -1,0 +1,83 @@
+header{
+    position: relative;
+    .bread{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        i{
+            font-size: 24px;
+        }
+    }
+
+}
+
+
+.classify {
+    background-color: #fff;
+    position: relative;
+    padding: 5px;
+    padding-bottom: 50px;
+}
+
+.classify-delete {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 2px #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.classify-delete .active {
+    color: #000;
+}
+
+.classify-delete .active span {
+    font-size: 40px;
+}
+
+.classify-title {
+    font-size: 16px;
+    margin-top: 60px;
+    font-weight: 600;
+}
+
+.classify-list {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.classify-list li {
+    float: left;
+    width: 25%;
+}
+
+.classify-list li a {
+    color: #000;
+    display: block;
+    background-color: #F1F1F1;
+    border-radius: 2px;
+    margin: 5px .2rem;
+    font-size: 12px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.classify-list li a:nth-child(3n+1) {
+    margin-left: 0;
+}
+.not-classify{
+    text-align: center;
+    
+}

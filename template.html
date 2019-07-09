@@ -20,9 +20,9 @@
   <meta http-equiv="Expires" content="0" />
   <meta name=viewport
     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
-    <link rel="stylesheet" href="../css/mui.min.css">
-    <link rel="stylesheet" href="./iconfont/iconfont.css" >
-    <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="./css/mui.min.css">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/reset.css">
 </head>
 <script>
   !(function (doc, win) {
@@ -47,8 +47,20 @@
 </script>
 
 <body>
-    
-  <script src="../js/mui.js"></script>
+
+  <script src="./js/mui.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    function factorial(num) {
+      num * factorial(num - 1)
+    }
+    var anotherFactorial = factorial
+    factorial = null
+    anotherFactorial(4)   // 报错 ，因为最好是return num* arguments.callee（num-1），arguments.callee指向当前执行函数，但是在严格模式下不能使用该属性也会报错，所以借助闭包来实现
+
+    // 使用闭包实现递归
+    //这样就没有问题了，实际上起作用的是闭包函数f，而不是外面的函数newFactorial
+  </script>
 </body>
 
 </html>

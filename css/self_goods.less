@@ -1,0 +1,160 @@
+header.mui-bar {
+    box-shadow: 0 1px 6px #fff;
+}
+
+.content {
+    margin-top: 89px;
+}
+
+.orderTap {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    position: fixed;
+    width: 100%;
+    top: 44px;
+    left: 0;
+}
+
+.mui-table-view-cell>a:not(.mui-btn).mui-active {
+    background-color: #fff;
+}
+
+// .mui-table-view-cell.mui-active {
+//     background-color: #fff;
+// }
+.mui-table-view-cell.mui-collapse.mui-active {
+    margin-top: 0;
+}
+
+.mui-table-view-cell:after {
+    display: none;
+}
+
+.btn_serach {
+    padding: 0;
+}
+
+#btn_serach {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+
+    span {
+        font-size: 24px;
+    }
+}
+
+#topPopover {
+    position: fixed;
+    top: 16px;
+    right: 6px;
+    width: 95%;
+
+    .mui-table-view-cell:after {
+        display: block;
+    }
+
+    .mui-table-view-cell {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+#topPopover .mui-popover-arrow {
+    left: auto;
+    right: 6px;
+}
+
+.mui-plus .plus {
+    display: inline;
+}
+
+.plus {
+    display: none;
+}
+
+#topPopover .mui-popover-arrow {
+    left: auto;
+    right: 6px;
+}
+
+.mui-popover {
+    min-height: 180px;
+}
+
+
+.search_goods_list {
+    background: #fff;
+    margin-bottom: 5px;
+
+    .search_content {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            width: 110px;
+        }
+
+        .right {
+            padding: 5px;
+            margin-right: 1%;
+            height: 110px;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 64%;
+
+            .name {
+                img {
+                    width: 20px;
+                    height: 9.8px;
+                    margin-right: 5px;
+                }
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                color: #999;
+            }
+
+            .value {
+                display: flex;
+                align-items: center;
+
+                .quan {
+                    background: url(../static/bg_shop_coupons.png)no-repeat;
+                    background-size: 100%;
+                    background-position: right;
+                    width: 30%;
+                    height: 22px;
+                    text-align: center;
+                    line-height: 22px;
+                    color: #fff;
+                    margin-right: 5px;
+                }
+
+                .red {
+                    border: 1px solid #ff0066;
+                    color: #ff0066;
+                    text-align: center;
+                    padding: 3px 5px;
+                    line-height: 1;
+                    border-radius: 5px;
+                    width: 30%;
+                    height: 20px;
+                    box-sizing: border-box;
+                }
+            }
+
+            .price {
+                color: #ff0066;
+                font-size: 17px;
+            }
+        }
+    }
+}

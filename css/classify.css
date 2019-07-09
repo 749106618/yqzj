@@ -52,12 +52,15 @@
   flex-wrap: wrap;
 }
 .main-content ul li {
+  width: 33.33333%;
+  margin-top: 30px;
+}
+.main-content ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 33.33333%;
-  margin-top: 30px;
+  color: #000;
 }
 .main-content ul li img {
   width: 60px;

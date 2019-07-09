@@ -56,7 +56,7 @@
     <div class="main">
         <div class="main-side" id="side">
             <ul>
-                <li>标签名称</li>
+                <li class="side-active">标签名称</li>
                 <li>标签名称</li>
                 <li>标签名称</li>
                 <li>标签名称</li>
@@ -79,64 +79,11 @@
         <div class="main-content">
             <ul>
                 <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
-                </li>
-                <li>
-                    <img
-                        src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
-                    <div>净水壶</div>
+                    <a href="./self_goods.html">
+                        <img
+                            src="https://img10.360buyimg.com/focus/s140x140_jfs/t12115/157/349067422/11364/28a9b89a/5a096b1bN0ef73ecd.jpg">
+                        <div>净水壶</div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -154,14 +101,14 @@
             <span class="mui-icon iconfont icon-liping"></span>
             <span class="mui-tab-label">红包</span>
         </a>
-        <a href="./self.html">
+        <a>
             <span class="mui-icon mui-icon-contact"></span>
             <span class="mui-tab-label">我</span>
         </a>
     </nav>
     <script src="./js/mui.js"></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/better-scroll.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/better-scroll/dist/bscroll.min.js"></script>
     <script>
         $(function () {
             var side = document.querySelector('#side')
@@ -175,7 +122,7 @@
                 tap: true
             })
 
-            $('#side').on('tap','ul>li',function(){
+            $('#side').on('tap', 'ul>li', function () {
                 $(this).addClass('side-active').siblings('li').removeClass('side-active')
             })
 
